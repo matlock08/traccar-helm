@@ -8,7 +8,7 @@ image:
   repository: traccar/traccar
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 5.1-ubuntu
+  tag: 5.2-ubuntu
 
 imagePullSecrets: []
 nameOverride: ""
@@ -44,7 +44,7 @@ ingress:
     kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: localhost.com
+    - host: api.tecka.mx
       paths:
         - path: /
           pathType: Prefix
@@ -55,8 +55,8 @@ ingress:
 
 resources: 
    limits:
-     cpu: 500m
-     memory: 2Gi
+     cpu: 250m
+     memory: 1Gi
    requests:
      cpu: 250m
      memory: 1Gi
